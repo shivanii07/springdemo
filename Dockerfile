@@ -1,4 +1,3 @@
-#base docker image
-FROM  openjdk:11 LABEL maintainer="shivanisharma"
-COPY target/springdemo-0.0.1-SNAPSHOT.jar /springdemo.jar
-ENTRYPOINT ["java", "-jar", "/springdemo.jar"]
+from openjdk:11
+ADD target/springdemo-0.0.1-SNAPSHOT.jar demo.jar
+ENTRYPOINT ["java","-jar","/demo.jar"]
